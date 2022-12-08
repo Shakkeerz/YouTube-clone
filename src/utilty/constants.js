@@ -8,11 +8,11 @@ import logo from '../assets/youtubeicon.svg'
 
 export const youtubelogo = logo
 export const categories = [
-    {name:"New" , Icon : <AiFillHome/>},
-    {name:"JS Mastery" , Icon : <BsCodeSlash/>},
-    {name:"Coding" , Icon : <BsCodeSlash/>},
-    {name:"ReactJs" , Icon : <BsCodeSlash/>},
-    {name:"NextJS" , Icon : <BsCodeSlash/>},
+    {name:"Recommandation" , Icon : <AiFillHome/>},
+    {name:"Malayalam" , Icon : <BsCodeSlash/>},
+    {name:"Science" , Icon : <BsCodeSlash/>},
+    {name:"Health" , Icon : <BsCodeSlash/>},
+    {name:"Finance" , Icon : <BsCodeSlash/>},
     {name:"Music" , Icon : <BiMusic/>},
     {name:"Education" , Icon : <IoMdSchool/>},
     {name:"Podcast" , Icon : <MdGraphicEq/>},

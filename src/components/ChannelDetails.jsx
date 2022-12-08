@@ -5,18 +5,22 @@ import { fetchFromApi } from "../utilty/FetchFromApi";
 import { demoThumbnailUrl } from "../utilty/constants";
 import { useState } from "react";
 import { BsBell } from "react-icons/bs";
-import {ChannelCard , Videos} from "./index";
+import { ChannelCard, Videos } from "./index";
 
 function ChannelDetails() {
   const { id } = useParams();
   const [ChannelDetails, setChannelDetails] = useState(null);
   const [channelVideos, setChannelVideos] = useState();
   useEffect(() => {
-    fetchFromApi(`/channels?part=snippet&id=${id}`).then((data) =>setChannelDetails(data?.items[0]));
+    fetchFromApi(`/channels?part=snippet&id=${id}`).then((data) =>
+      setChannelDetails(data?.items[0])
+    );
 
-    fetchFromApi(`/search?ChannelId=${id}$part=snippet&order=date`).then((data)=>setChannelVideos(data.items))
+    fetchFromApi(`/search?ChannelId=${id}$part=snippet&order=date`).then(
+      (data) => setChannelVideos(data.items)
+    );
   }, [id]);
- console.log(channelVideos)
+  console.log(channelVideos);
   return (
     <section className="w-4/5 ml-auto">
       <div>
@@ -60,7 +64,7 @@ function ChannelDetails() {
         </div>
 
         <div className="flex p-2">
-         <Videos videos={channelVideos} />
+          <Videos videos={channelVideos} />
         </div>
       </div>
     </section>

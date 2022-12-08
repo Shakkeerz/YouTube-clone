@@ -13,13 +13,12 @@ function VideoCard({
     snippet,
   },
 }) {
-  // console.log();
   return (
-    <div className="w-[360px]">
+    <div className="w-[460px] md:w-[360px]">
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl} className="">
         <img
-          src={snippet?.thumbnails?.medium?.url}
-          className="w-[358px] h-[180px] obeject-cover rounded-2xl"
+          src={snippet?.thumbnails?.high?.url}
+          className="w-full h-[180px] object-cover rounded-2xl"
           alt={snippet?.title}
         />
       </Link>

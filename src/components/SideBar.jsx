@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { categories } from "../utilty/constants";
-function SideBar({setSelectedCategory,selectedCatogory}) {
-//   const [selectedCatogory, setSelectedCategory] = useState("");
+function SideBar({ setSelectedCategory, selectedCatogory }) {
+  //   const [selectedCatogory, setSelectedCategory] = useState("");
   return (
-    <div className="flex md:flex-col overflow-x-scroll ">
+    <div className=" flex md:flex-col overflow-x-scroll ">
       {categories?.map(({ Icon, name }, index) => (
         <button
           key={index}
@@ -12,6 +12,7 @@ function SideBar({setSelectedCategory,selectedCatogory}) {
           style={{ background: name === selectedCatogory && "#FC1503" }}
         >
           <span
+            className="hidden md:block"
             style={{
               color: name === selectedCatogory ? "white" : "red",
               marginRight: "15px",
@@ -19,7 +20,7 @@ function SideBar({setSelectedCategory,selectedCatogory}) {
           >
             {Icon}
           </span>
-          <span style={{ opacity: name === selectedCatogory ? '1' : '0.6' }}>
+          <span style={{ opacity: name === selectedCatogory ? "1" : "0.6" }}>
             {name}
           </span>
         </button>

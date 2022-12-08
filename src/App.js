@@ -9,7 +9,7 @@ function App() {
   // },[])
   return (
     <BrowserRouter>
-      <div className="bg-[#000]">
+      <div className="bg-[#000] px-100px">
         <Navbar />
         
         <Routes>

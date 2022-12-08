@@ -50,7 +50,8 @@ li{
 .search-bar{
   border-radius:50px;
   outline:none;
-  width:350px;
+  height: inherit;
+  width:100%;
 }
 
 .category-btn{
@@ -72,7 +73,7 @@ li{
 
 @media screen and (max-width: 900px) {
   .category-btn{
-    margin: 10px;
+    margin: 0px;
   }
 }
 
@@ -91,6 +92,6 @@ li{
     height: 45vh !important;
   }
   .search-bar{
-    width:200px;
+    width:100%;
   }
 }
