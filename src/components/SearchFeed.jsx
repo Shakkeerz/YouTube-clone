@@ -11,7 +11,6 @@ function Feed() {
   const [error, setError] = useState("");
 
   const {searchTerm} = useParams()
-  console.log(searchTerm)
 
   useEffect(() => {
     // fetchData(selectedCatogory)

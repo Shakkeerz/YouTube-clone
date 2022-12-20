@@ -26,8 +26,7 @@ function SearchBar() {
     setshowRecentSearch(false);
   };
   useEffect(() => {
-    //  console.log( recentSearch?.sort())
-    console.log(recentSearch);
+    // console.log(recentSearch);
   }, [recentSearch]);
 
   return (

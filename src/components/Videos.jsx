@@ -3,6 +3,7 @@ import { ChannelCard, VideoCard } from "./index";
 
 function Videos({ videos ,direction}) {
   if(!videos) return "Loading...."
+  console.log(videos)
   return (
     <div className={`flex justify-center flex-${direction || 'row'}  md:justify-start gap-2 flex-wrap`}>
     

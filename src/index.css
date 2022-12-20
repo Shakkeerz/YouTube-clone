@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 html,
 body {
@@ -9,13 +10,15 @@ body {
   padding: 0;
   box-sizing: border-box;
   color: white;
+  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
-li{
+li {
   list-style: none;
 }
 ::-webkit-scrollbar {
@@ -34,11 +37,11 @@ li{
 }
 
 .category-btn:hover {
-  background-color: #FC1503 !important;
+  background-color: #fc1503 !important;
   color: white !important;
 }
 
-.category-btn:hover span{
+.category-btn:hover span {
   color: white !important;
 }
 
@@ -47,20 +50,20 @@ li{
   width: 100% !important;
 }
 
-.search-bar{
-  border-radius:50px;
-  outline:none;
+.search-bar {
+  border-radius: 50px;
+  outline: none;
   height: inherit;
-  width:100%;
+  width: 100%;
 }
 
-.category-btn{
+.category-btn {
   font-weight: bold !important;
   text-transform: capitalize;
   display: flex;
   align-items: center;
   justify-content: start;
-  cursor:pointer;
+  cursor: pointer;
   background: transparent;
   outline: none;
   border: none;
@@ -72,14 +75,14 @@ li{
 }
 
 @media screen and (max-width: 900px) {
-  .category-btn{
+  .category-btn {
     margin: 0px;
   }
 }
 
-@media screen and (max-width:800px){
-  .copyright{
-    display:none !important;
+@media screen and (max-width: 800px) {
+  .copyright {
+    display: none !important;
   }
 }
 
@@ -91,7 +94,7 @@ li{
   .react-player {
     height: 45vh !important;
   }
-  .search-bar{
-    width:100%;
+  .search-bar {
+    width: 100%;
   }
 }

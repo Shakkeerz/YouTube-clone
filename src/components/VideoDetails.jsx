@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import { fetchFromApi } from "../utilty/FetchFromApi";
 import Videos from "./Videos";
 import {HiOutlineBadgeCheck} from 'react-icons/hi'
+import {LoadingSkeleton} from "./index"
 function VideoDetails() {
   const { id } = useParams();
   const [videoDetails, setVideoDetails] = useState("");
@@ -24,14 +25,13 @@ function VideoDetails() {
     setLoading(false);
   }, []);
   console.log(videoDetails);
-  if (!videoDetails) return "loading...";
+  if (!videoDetails) return <LoadingSkeleton/> ;
   const {
     snippet: { channelId, channelTitle, title },
     statistics: { likeCount, viewCount },
   } = videoDetails;
   return (
     <section className="flex flex-col p-5 md:p-10 md:flex-row justify-evenly ">
-      {loading && <div>Loading....</div>}
       <div className="w-full md:w-4/5">
         {/* video */}
         <div  className="flex flex-col" >
@@ -41,6 +41,7 @@ function VideoDetails() {
               controls
               width='100%'
               height='100%'
+              // className="md:h-full"
             />
           </div>
           {/* details */}

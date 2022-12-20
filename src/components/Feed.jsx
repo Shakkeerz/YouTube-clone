@@ -9,7 +9,6 @@ function Feed() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  console.log(selectedCatogory);
 
   useEffect(() => {
     // fetchData(selectedCatogory)
