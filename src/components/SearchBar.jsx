@@ -29,6 +29,9 @@ function SearchBar() {
     // console.log(recentSearch);
   }, [recentSearch]);
 
+  // useEffect(()=>{
+  // inputRef.focus()
+  // },[])
   return (
     <form
       onSubmit={handleSubmit}
@@ -42,7 +45,7 @@ function SearchBar() {
           showMubileSearch ? "block " : "hidden"
         }w-full md:block search-bar pl-2 text-black`}
         type="text"
-        placeholder="Search..."
+        placeholder="click here or / to Search..."
         value={searchTerm}
         onClick={(e) => {
           setshowRecentSearch(true);
@@ -51,6 +54,7 @@ function SearchBar() {
           //  setshowRecentSearch(false)
         }}
         onChange={(e) => setSearchTerm(e.target.value)}
+        autoFocus
       />
       <AiOutlineSearch
         type="submit"
@@ -61,14 +65,7 @@ function SearchBar() {
       {/* displaying recent searches */}
       {showRecentSearch && (
         <div className="absolute z-10 bg-black top-10 right-0 left-0 max-h-[300px] h-auto rounded-2xl overflow-y-scroll">
-          {recentSearch?.sort().map((recentItem,index) => (
-            <Link key={index} to={""} className="p-2 flex justify-between">
-              <li onClick={()=>setSearchTerm(recentItem)}>{recentItem}</li>
-              <span className="text-blue-500 cursor-pointer hover:underline">
-                Remove
-              </span>
-            </Link>
-          ))}
+         {Array.from(recentSearch).map((item,index,array)=> <li>{b}</li> )}
         </div>
       )}
     </form>
